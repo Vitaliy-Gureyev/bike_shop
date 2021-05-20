@@ -1,0 +1,56 @@
+.contact-page-container {
+  width: 100%;
+  min-width: $minWidth+px;
+  display: flex;
+  margin: 20px 0 0 0;
+  justify-content: center;
+
+  /*global settings for all forms*/
+  .contact-forms {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  /*settings for input fields*/
+  input[type=text], select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: $br;
+    margin: 6px 0 16px;
+  }
+
+  /*settings for submit button*/
+  input[type=submit] {
+    width: 200px;
+    background-color: $color-maine-blue;
+    color: $color-white;
+    padding: 12px 20px;
+    border-radius: $br;
+    cursor: pointer;
+  }
+
+  /*settings for subject field*/
+  .subject-text-area {
+    height: 200px;
+    resize: none;
+  }
+}
+
+@media (min-width: $small-display+px) {
+  .contact-page-container {
+    @include centering;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $large-display+px) {
+  .contact-page-container {
+    width: $maxWidthContainer - 20 - 260 +px;
+    margin: 20px 0 0 20px;
+
+    .contact-forms {
+      width: 95%
+    }
+  }
+}

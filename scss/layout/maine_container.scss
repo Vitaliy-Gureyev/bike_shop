@@ -1,0 +1,20 @@
+.maine-container {
+  min-width: $minWidth+px;
+}
+
+@media (min-width: $medium-display+px) {
+  .maine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: $large-display+px) {
+  .maine-container {
+    width: $maxWidthContainer+px;
+    flex-direction: row;
+    align-items: start;
+    @include centering;
+  }
+}

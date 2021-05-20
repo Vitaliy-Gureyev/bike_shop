@@ -1,0 +1,87 @@
+/*  settings for navigation bar*/
+.nav-bar {
+  background-color: $color-white;
+  border-radius: $br;
+
+  .nav-list {
+    margin: 0;
+    display: flex;
+    padding: 0;
+  }
+
+  li {
+    width: 33.33%;
+    line-height: 3;
+
+    a {
+      @include font-style($medium-font, $color-black, bold, $decor: none);
+      transition: background-color 0.4s ease 0s;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    a:hover {
+      background-color: $color-lightgrey;
+    }
+
+    a.active {
+      background-color: $color-midgrey;
+    }
+  }
+}
+
+/*  settings for calendar*/
+.calendar-container {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: $br;
+  width: 100%;
+  display: none;
+  height: 300px;
+  color: $color-maine-blue;
+}
+
+/*adaptive*/
+@media (min-width: $mobile-display+px) {
+  .nav-bar li a {
+    @include font-style($large-font, $weight: 400);
+  }
+}
+
+@media (min-width: $medium-display+px) {
+  .side-bar {
+    margin-top: 0;
+    width: 100%;
+
+    .nav-bar {
+      .nav-list {
+        margin: 0;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-display+px) {
+  .side-bar {
+    margin-top: 20px;
+    width: 260px;
+
+    .nav-bar {
+      .nav-list {
+        flex-direction: column;
+        padding: 0;
+
+        li {
+          width: 100%;
+          line-height: 4;
+        }
+      }
+    }
+
+    .calendar-container {
+      display: flex;
+    }
+  }
+}

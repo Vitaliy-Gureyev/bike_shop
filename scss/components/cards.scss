@@ -1,0 +1,203 @@
+/*  horizontal line*/
+hr {
+  border: dashed 0.5px #bdbdbd;
+  margin: 0 6% 0 6%;
+}
+
+
+/*sale circle*/
+.sale-circle {
+  display: inline-flex;
+  margin: 10px;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+}
+
+/*settings for all cards*/
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(14, 215px);
+  grid-gap: 15px;
+  grid-template-areas:
+         "a" "a" "b" "c" "d" "e" "f" "g" "g" "h" "i" "j";
+
+  .item1 {
+    grid-area: a;
+  }
+
+  .item2 {
+    grid-area: b;
+  }
+
+  .item3 {
+    grid-area: c;
+  }
+
+  .item4 {
+    grid-area: d;
+  }
+
+  .item5 {
+    grid-area: e;
+  }
+
+  .item6 {
+    grid-area: f;
+  }
+
+  .item7 {
+    grid-area: g;
+  }
+
+  .item8 {
+    grid-area: h;
+  }
+
+  .item9 {
+    grid-area: i;
+  }
+
+  .item10 {
+    grid-area: j;
+  }
+}
+
+/*info about price*/
+.price {
+  grid-area: c;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "a b . . c";
+  grid-gap: 5px;
+  padding: 0 5% 0 5%;
+  align-items: end;
+  color: $color-darkgrey;
+  font-size: $small-font;
+
+  .price_actual-price {
+    font-size: $extra-large-font;
+    text-align: center;
+  }
+
+  .price_old-price {
+    white-space: pre;
+    position: relative;
+    display: inline-block;
+
+  }
+
+  .price_store {
+    grid-area: c;
+  }
+}
+
+/*Strikethrough diagonal*/
+.price_old-price:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  width: 40px;
+  height: 0;
+  border-bottom: 2px solid $color-darkgrey;
+  transform: rotate(20deg);
+}
+
+/*maine text*/
+.text {
+  @include font-style($small-font, $color-darkgrey);
+  grid-area: b;
+  padding: 0 5% 0 5%;
+  align-items: end;
+  height: 40px;
+  overflow: hidden;
+}
+
+/*footer*/
+.card-footer {
+  grid-area: d;
+  display: grid;
+  grid-template-columns: minmax(10px, auto);
+  grid-template-areas: "a b c";
+  grid-gap: 5px;
+  padding: 0 5% 5% 5%;
+  @include font-style($small-font, $color-darkgrey);
+  text-align: center;
+
+  .card-footer_option1 {
+    grid-area: a;
+  }
+
+  .card-footer_option2 {
+    grid-area: b;
+  }
+
+  .card-footer_option3 {
+    grid-area: c;
+  }
+}
+
+/*big card options*/
+.big-card {
+  background-color: white;
+  border-radius: $br;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    padding: 20px;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+
+  .price {
+    margin-top: auto;
+  }
+
+  text {
+    height: 70px;
+  }
+}
+
+/*small cards options*/
+.small-card {
+  background-color: white;
+  border-radius: $br;
+
+  img {
+    height: 94px;
+  }
+
+  .text {
+    width: 80%;
+    margin: 10px 0 10px 0;
+    padding-right: 0;
+  }
+
+  .image {
+    position: relative;
+    float: right;
+    margin: 10px 10px 0 0;
+  }
+}
+
+@media (min-width: $large-display+px) {
+  .big-card {
+    img {
+      width: 80%;
+    }
+  }
+}

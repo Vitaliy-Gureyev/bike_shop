@@ -1,0 +1,39 @@
+/*icon and copyright text color*/
+a, .copyright {
+  color: $color-darkgrey;
+}
+
+a {
+  @include font-style($size: 30px);
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  min-width: $minWidth+px;
+  align-items: center;
+  padding: 15px 0 15px 0;
+
+  /*  settings for social networks icon*/
+  .social-networks-container {
+    display: flex;
+    padding: 0;
+
+    .social-network {
+      list-style-type: none;
+    }
+
+    a {
+      margin: 0 17px;
+    }
+  }
+
+  /*  settings for copyright text*/
+  .copyright {
+    font-size: $medium-font;
+  }
+}

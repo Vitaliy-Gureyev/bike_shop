@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration page</title>
+    <script src="https://kit.fontawesome.com/97511e0203.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="js/facebook_auth.js"></script>
+</head>
+<body>
+
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=921825628615767&autoLogAppEvents=1"
+        nonce="Wi5RwWrK"></script>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="header-logo-container">
+            <div class="header-logo">
+                <img src="./images/logo.svg" alt="">
+            </div>
+        </div>
+        <div class="header-search-bar">
+            <div class="search-container">
+                <form action="#">
+                    <input class="search-input" type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div class="auth-container">
+                <div class="auth">
+                    <a href="register_page.html">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="maine-container">
+        <nav class="side-bar">
+            <div class="nav-bar">
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="contact_page.html">Contact page</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="calendar-container">
+            </div>
+        </nav>
+        <div class="register-page-container">
+            <form action="#" class="contact-forms">
+                <lable for="name">Name</lable>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+
+                <lable for="email">Last Name</lable>
+                <input type="email" id="email" name="email" placeholder="Your email..">
+
+                <lable for="password">Password</lable>
+                <input type="password" id="password" name="password" placeholder="password..">
+
+                <lable for="confirm_password">Confirm password</lable>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="confirm password..">
+                <div class="buttons">
+                    <input type="submit" value="Submit" id="submit">
+                    <div id="fb-root">
+                        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with"
+                             data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <ul class="social-networks-container">
+            <li class="social-network">
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="social-network">
+                <a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li class="social-network">
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-network">
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="copyright">Copyright Ⓒ2021 All rights reserved</div>
+    </footer>
+    <script src="js/registration_info.js"></script>
+</div>
+</body>

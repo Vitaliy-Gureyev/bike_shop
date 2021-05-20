@@ -1,0 +1,55 @@
+.register-page-container {
+  width: 100%;
+  min-width: $minWidth+px;
+  display: flex;
+  margin: 20px 0 0 0;
+  justify-content: center;
+
+  /*global settings for all forms*/
+  .contact-forms {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  /*settings for input fields*/
+  input, select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: $br;
+    margin: 6px 0 16px;
+  }
+
+  /*settings for submit button*/
+  input[type=submit] {
+    width: 200px;
+    background-color: $color-maine-blue;
+    color: $color-white;
+/*    padding: 12px 20px;*/
+    margin: auto 10px auto 0;
+    border-radius: $br;
+    cursor: pointer;
+  }
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: $small-display+px) {
+  .register-page-container {
+    @include centering;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $large-display+px) {
+  .register-page-container {
+    width: $maxWidthContainer - 20 - 260 +px;
+    margin: 20px 0 0 20px;
+
+    .contact-forms {
+      width: 95%
+    }
+  }
+}

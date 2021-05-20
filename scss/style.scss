@@ -1,0 +1,37 @@
+/*global*/
+.wrapper {
+  background-color: #f7f7f7;
+}
+li {
+  list-style-type: none;
+}
+button, input {
+  border: none;
+}
+img {
+  overflow: hidden;
+}
+
+@import
+'variables and mixins/variables',
+'variables and mixins/mixins';
+
+@import
+'base/reset',
+'base/typography';
+
+@import
+'layout/header',
+'layout/sidebar',
+'layout/maine_container',
+'layout/footer';
+
+@import
+'pages/home',
+'pages/contact_page',
+'pages/about_us',
+'pages/register_page';
+
+@import
+'components/cards';
+

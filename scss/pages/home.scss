@@ -1,0 +1,48 @@
+.home-page {
+  margin-top: 20px;
+  @include centering;
+  width: 90%;
+
+}
+
+/*Adaptive*/
+@media (min-width: $mobile-display+px) {
+  .home-page {
+    width: 460px;
+  }
+}
+
+@media (min-width: $medium-display+px) {
+  .home-page {
+    width: $maxWidthContainer - 20 - 260 +px;
+    align-items: center;
+
+    .cards {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas:
+        "a b"
+        "a c"
+        "d e"
+        "f g"
+        "h g"
+        "i j";
+    }
+  }
+}
+
+@media (min-width: $large-display+px) {
+  .home-page {
+    margin-left: 20px;
+
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "a b c"
+         "a d e"
+         "f g h"
+         "i g j";
+    }
+  }
+}
